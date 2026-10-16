@@ -1,0 +1,18 @@
+{
+  "ssh_log": "/var/log/auth.log",
+  "apache_logs": [
+    "/var/log/apache2/access.log"
+  ],
+  "apache_watch_paths": ["/login", "/wp-login.php", "/admin"],
+  "apache_ignore_paths": ["/static/*", "/assets/*", "*.png", "*.jpg", "*.jpeg", "*.gif", "*.svg", "*.ico", "*.css", "*.js", "*.woff", "*.woff2"],
+  "failed_threshold": 5,
+  "time_window_sec": 600,
+  "ban_duration_sec": 3600,
+  "allowlist": [
+    "127.0.0.1",
+    "YOUR_HOME_OR_OFFICE_IP/32",
+    "YOUR_VPN_CIDR/24"
+  ],
+  "slack_webhook_url": "https://hooks.slack.com/services/XXXX/YYYY/ZZZZ",
+  "dry_run": false
+}

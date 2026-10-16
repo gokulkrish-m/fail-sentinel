@@ -1,0 +1,13 @@
+[Unit]
+Description=Brute Force Guard - log watcher and auto-banner
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/brute-force-guard/brute_force_guard.py --config /opt/brute-force-guard/config.json
+Restart=on-failure
+RestartSec=5
+User=root
+
+[Install]
+WantedBy=multi-user.target
